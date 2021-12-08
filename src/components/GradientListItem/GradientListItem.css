@@ -1,0 +1,60 @@
+:root {
+    --border-rad: 16px;
+}
+
+.gradient-block {
+    width: 301px;
+    height: 90px;
+    background-size: cover;
+    border-radius: var(--border-rad);
+    display: flex;
+}
+
+.gradient-block__colors {
+    width: 84%;
+    border-right: 1px solid var(--main-color);
+    border-top-left-radius: var(--border-rad);
+    border-bottom-left-radius: var(--border-rad);
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gradient-block__colors > span {
+    font-size: 24px;
+    color: #fff7ff;
+}
+
+.gradient-block__buttons {
+    width: 16%;
+    border-top-right-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
+}
+
+.gradient-block__buttons__remove {
+    width: 100%;
+    height: 50%;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    cursor: pointer;
+    background-color: #fff7ff;
+    background-image: url(../../assets/delete-icon.png);
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: var(--border-rad);
+}
+
+.gradient-block__buttons__edit {
+    width: 100%;
+    height: 50%;
+    background-color: #fff7ff;
+    cursor: pointer;
+    background-image: url(../../assets/edit-icon.png);
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border-bottom-right-radius: var(--border-rad);
+}

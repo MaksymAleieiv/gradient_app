@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gradient form create snapshot, i want to die 1`] = `
+<div
+  data-testid="form"
+>
+  <form
+    action="#"
+    className="gradient-form"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <div
+      className="gradient-form__inner"
+    >
+      <div
+        className="gradient-form-input-holder"
+      >
+        <input
+          className="gradient-form-input undefined"
+          name="firstColor"
+          onBlur={[Function]}
+          onChange={[Function]}
+          value=""
+        />
+        <div
+          className="gradient-form-error"
+        />
+      </div>
+      <div
+        className="gradient-form-input-holder"
+      >
+        <input
+          className="gradient-form-input undefined"
+          name="secondColor"
+          onBlur={[Function]}
+          onChange={[Function]}
+          value=""
+        />
+        <div
+          className="gradient-form-error"
+        />
+      </div>
+    </div>
+    <button
+      className="gradient-form-submit error"
+      disabled={true}
+      type="submit"
+    >
+       
+      Add Gradient
+    </button>
+  </form>
+</div>
+`;
+
+exports[`gradient form edit snapshot, i want to die 1`] = `
+<div
+  data-testid="form"
+>
+  <form
+    action="#"
+    className="gradient-form"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <div
+      className="gradient-form__inner"
+    >
+      <div
+        className="gradient-form-input-holder"
+      >
+        <input
+          className="gradient-form-input undefined"
+          name="firstColor"
+          onBlur={[Function]}
+          onChange={[Function]}
+          value="#fff"
+        />
+        <div
+          className="gradient-form-error"
+        />
+      </div>
+      <div
+        className="gradient-form-input-holder"
+      >
+        <input
+          className="gradient-form-input undefined"
+          name="secondColor"
+          onBlur={[Function]}
+          onChange={[Function]}
+          value="#000"
+        />
+        <div
+          className="gradient-form-error"
+        />
+      </div>
+    </div>
+    <button
+      className="gradient-form-submit"
+      disabled={false}
+      type="submit"
+    >
+       
+      Save Changes
+    </button>
+  </form>
+</div>
+`;

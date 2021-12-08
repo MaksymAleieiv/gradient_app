@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gradient list item snapshot, i want to die 1`] = `
+<div
+  className="gradient-block"
+  style={
+    Object {
+      "background": "linear-gradient(to right, #fff, #000)",
+    }
+  }
+>
+  <div
+    className="gradient-block__colors"
+  >
+    <span>
+      #fff
+    </span>
+    <span>
+      #000
+    </span>
+  </div>
+  <div
+    className="gradient-block__buttons"
+  >
+    <button
+      className="gradient-block__buttons__remove"
+      onClick={[Function]}
+    >
+       
+    </button>
+    <a
+      className="gradient-block__buttons__edit"
+      href="/edit/10"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

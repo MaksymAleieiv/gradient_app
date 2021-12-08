@@ -28,6 +28,10 @@
     border:none;
 }
 
+.gradient-form-input.error {
+    border: 1px inset #f95353;
+}
+
 .gradient-form-error {
     color: #f95353;
     margin-top: 4px;
@@ -44,6 +48,11 @@
     margin-top: 20px;
     cursor: pointer;
     border-radius: var(--border-rad);
+}
+
+.gradient-form-submit.error {
+    opacity: 0.9;
+    cursor: not-allowed;
 }
 
 @media (max-width: 420px) {

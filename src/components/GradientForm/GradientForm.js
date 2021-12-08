@@ -25,7 +25,7 @@ function GradientForm({gradient = {}}) {
     }
 
     return (
-        <div>
+        <div data-testid='form'>
             <Formik
                 initialValues={{
                     firstColor: gradient.firstColor || '',
@@ -33,19 +33,24 @@ function GradientForm({gradient = {}}) {
                 }}
                 onSubmit={onSubmit}
             >
-                {({errors, touched}) => (
+                {({errors, touched, isValid, dirty}) => (
                     <Form className='gradient-form'>
                         <div className='gradient-form__inner'>
                             <div className='gradient-form-input-holder'>
-                                <Field name='firstColor' validate={validateHex} className='gradient-form-input'/>
+                                <Field name='firstColor' validate={validateHex} className={`gradient-form-input ${touched.firstColor && errors.firstColor && 'error'}`}/>
                                 <div className='gradient-form-error'>{touched.firstColor && errors.firstColor}</div>
                             </div>
                             <div className='gradient-form-input-holder'>
-                                <Field name='secondColor' validate={validateHex} className='gradient-form-input'/>
+                                <Field name='secondColor' validate={validateHex} className={`gradient-form-input ${touched.secondColor && errors.secondColor && 'error'}`}/>
                                 <div className='gradient-form-error'>{touched.secondColor && errors.secondColor}</div>
                             </div>
                         </div>
-                        <button type='submit' className='gradient-form-submit'> {gradient.firstColor ? 'Save Changes' : 'Add Gradient'}</button>
+                        {!!gradient.id ? (
+                            <button type='submit' disabled={!isValid} className={(isValid) ? 'gradient-form-submit' : 'gradient-form-submit error'}> {gradient.firstColor ? 'Save Changes' : 'Add Gradient'}</button>
+                        ) : (
+                            <button type='submit' disabled={!(isValid && dirty)} className={(isValid && dirty) ? 'gradient-form-submit' : 'gradient-form-submit error'}> {gradient.firstColor ? 'Save Changes' : 'Add Gradient'}</button>
+                        )}
+                        
                     </Form>
                 )}
             </Formik>

@@ -1,8 +1,11 @@
 main {
-    background-color: var(--main-color);
-    width: 100%;
+    background-color: #323437;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main > div {
+    width: min(600px, 90%);
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { gradientsList_ActionCreators } from '../../store/reducers/gradients-list/gradientsList_ActionCreators'
+import './GradientForm.css'
 
 function GradientForm({gradient = {}}) {
     const dispatch = useDispatch();
@@ -33,12 +34,18 @@ function GradientForm({gradient = {}}) {
                 onSubmit={onSubmit}
             >
                 {({errors, touched}) => (
-                    <Form>
-                        <Field name='firstColor' validate={validateHex}/>
-                        {errors.firstColor && touched.firstColor && <div>{errors.firstColor}</div>}
-                        <Field name='secondColor' validate={validateHex}/>
-                        {errors.secondColor && touched.secondColor && <div>{errors.secondColor}</div>}
-                        <button type='submit'> {gradient.firstColor ? 'Save' : 'Add'}</button>
+                    <Form className='gradient-form'>
+                        <div className='gradient-form__inner'>
+                            <div className='gradient-form-input-holder'>
+                                <Field name='firstColor' validate={validateHex} className='gradient-form-input'/>
+                                <div className='gradient-form-error'>{touched.firstColor && errors.firstColor}</div>
+                            </div>
+                            <div className='gradient-form-input-holder'>
+                                <Field name='secondColor' validate={validateHex} className='gradient-form-input'/>
+                                <div className='gradient-form-error'>{touched.secondColor && errors.secondColor}</div>
+                            </div>
+                        </div>
+                        <button type='submit' className='gradient-form-submit'> {gradient.firstColor ? 'Save Changes' : 'Add Gradient'}</button>
                     </Form>
                 )}
             </Formik>

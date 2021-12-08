@@ -6,4 +6,6 @@
 
 :root {
     --main-color : #1f2123;
+    --border-rad: 16px;
+    --whitey: #fff7ff;
 }

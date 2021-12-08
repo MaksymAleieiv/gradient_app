@@ -1,0 +1,56 @@
+.gradient-form {
+    width: min(320px, 90%);
+    height: 320px;
+    margin: auto;
+}
+
+.gradient-form__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gradient-form-input-holder {
+    width: 48%;
+}
+
+.gradient-form-input {
+    width: 100%;
+    height: 32px;
+    padding-left: 4px;
+    font-size: 24px;
+    color: var(--main-color);
+    background-color: var(--whitey);
+    border:none;
+}
+
+.gradient-form-input:focus {
+    outline: none;
+    border:none;
+}
+
+.gradient-form-error {
+    color: #f95353;
+    margin-top: 4px;
+    height: 18px;
+}
+
+.gradient-form-submit {
+    width: 100%;
+    height: 32px;
+    color: var(--main-color);
+    border: none;
+    font-size: 22px;
+    background: var(--whitey);
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: var(--border-rad);
+}
+
+@media (max-width: 420px) {
+    .gradient-form__inner {
+        display: block;
+    }
+    .gradient-form-input-holder {
+        width: 100%;
+    }
+}

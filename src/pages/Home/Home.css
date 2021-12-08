@@ -1,0 +1,12 @@
+.add-gradient-button {
+    display: block;
+    color: var(--main-color);
+    background-color: var(--whitey);
+    width: 132px;
+    height: 42px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    border-radius: var(--border-rad);
+    line-height: 40px;
+}
